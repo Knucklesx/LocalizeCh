@@ -1,0 +1,9 @@
+Front/.angular
+Front/node_modules
+Front/node_modules/
+LocalizeApi/bin/Debug/
+LocalizeApi/obj/
+LocalizeApi/Migrations/
+LocalizeFront/public/favicon.ico
+LocalizeFront/.vscode/
+LocalizeFront2
