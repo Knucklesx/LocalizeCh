@@ -74,7 +74,12 @@ namespace LocalizeApi.Controller
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            //    _localizeContext.Clientes.Remove();
+            var client = _localizeContext.Clients.FirstOrDefault(c => c.Id == id);
+            if (client == null)
+            {
+                return NotFound();
+            }
+            _localizeContext.Clients.Remove(client);
             _localizeContext.SaveChanges();
             return NoContent();
         }

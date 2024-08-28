@@ -39,6 +39,19 @@ namespace LocalizeApi.Data
         public DbSet<Usuário> Users { get; set; }
 
 
+        public void Seed()
+        {
+            if (!Users.Any())
+            {
+                Users.Add(new Usuário
+                {
+                    Nome = "Usuário1",
+                    Email = "usuario1@gmail.com",
+                    Senha = "1",
+                });
+                SaveChanges();
+            }
+        }
 
     }
 }

@@ -75,12 +75,14 @@ export class MainComponent implements OnInit {
   editClient(clientId: number) {
     console.log(`oi ${clientId}`);
   }
+
   deleteClient(clientId: number) {
     this.http
       .delete(`http://localhost:5048/api/Cliente/${clientId}`)
       .subscribe({
         next: () => {
-          this.router.navigate(['/main']);
+          // this.router.navigate(['/main']);
+          this.fetchClients();
         },
         error: (error) => {
           alert('Erro ao deletar o cliente');
