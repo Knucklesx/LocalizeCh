@@ -32,7 +32,6 @@ export class UserChargesComponent implements OnInit {
       .subscribe({
         next: (data: ClientInterface) => {
           this.clients = data;
-          console.log('data', data);
         },
         error: (error: any) => {
           console.log('error', error);
@@ -41,7 +40,6 @@ export class UserChargesComponent implements OnInit {
   }
 
   isExpired(dataVencimento: string, paid: boolean): boolean {
-    console.log('paid', paid);
     const vencimentoDate = new Date(dataVencimento);
     return vencimentoDate < this.today && !paid;
   }
@@ -49,9 +47,7 @@ export class UserChargesComponent implements OnInit {
   editClient(id: number) {
     console.log('editClient', id);
   }
-  deleteClient(id: number) {
-    console.log('deleteClient', id);
-  }
+  deleteClient(id: number) {}
 
   addCharge() {
     this.router.navigate(['/add-charge']);

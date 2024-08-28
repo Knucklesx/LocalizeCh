@@ -36,18 +36,15 @@ export class LoginComponent {
         email,
         senha,
       })
-      .subscribe(
-        (response) => {
-          if (response) {
-            console.log('response', response);
-
-            this.router.navigate(['/main']);
-          }
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/main']);
         },
-        (error) => {
+        error: (error) => {
           console.error('E-mail ou Senha incorreto', error);
-        }
-      );
+          alert('E-mail ou senha incorretos');
+        },
+      });
   }
 
   CadastrarUser() {

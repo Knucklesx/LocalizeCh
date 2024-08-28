@@ -43,7 +43,6 @@ export class AddChargeComponent implements OnInit {
       .get<ClientInterface[]>('http://localhost:5048/api/Cliente')
       .subscribe({
         next: (response) => {
-          console.log('response', response);
           this.clients = response;
           return this.clients;
         },
@@ -65,10 +64,8 @@ export class AddChargeComponent implements OnInit {
         pago: false,
         clienteId: formValue.clientID,
       };
-      console.log('submit', payload);
       this.http.post('http://localhost:5048/api/Charge', payload).subscribe({
-        next: (response) => {
-          console.log('response', response);
+        next: () => {
           this.router.navigate(['/main']);
         },
         error: (error) => {

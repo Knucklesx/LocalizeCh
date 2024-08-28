@@ -32,7 +32,6 @@ export class MainComponent implements OnInit {
       .get<ClientInterface[]>('http://localhost:5048/api/Cliente')
       .subscribe({
         next: (response) => {
-          console.log('response', response);
           this.clients = response.map((client) => {
             let pagos = 0;
             let abertos = 0;
@@ -77,7 +76,16 @@ export class MainComponent implements OnInit {
     console.log(`oi ${clientId}`);
   }
   deleteClient(clientId: number) {
-    console.log(`oi ${clientId}`);
+    this.http
+      .delete(`http://localhost:5048/api/Cliente/${clientId}`)
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/main']);
+        },
+        error: (error) => {
+          alert('Erro ao deletar o cliente');
+        },
+      });
   }
   someAction(clientId: number) {
     this.router.navigate(['/user-charges', clientId]);

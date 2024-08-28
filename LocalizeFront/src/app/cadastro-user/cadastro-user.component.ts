@@ -36,12 +36,10 @@ export class CadastroUserComponent {
     this.http
       .post('http://localhost:5048/api/Users', { nome, email, senha })
       .subscribe({
-        next: (response) => {
-          if (response) console.log(response);
+        next: () => {
           this.router.navigate(['/']);
         },
         error: (err) => {
-          console.log('err', err.error.message);
           this.modalService.openErrorModal(err.error.message, 'cadastro');
         },
       });
