@@ -58,8 +58,8 @@ export class AddChargeComponent implements OnInit {
       const valor = parseFloat(formValue.price.replace(/\D/g, '')) / 100;
 
       const payload = {
-        descrição: formValue.description,
-        valor: valor,
+        description: formValue.description,
+        value: valor,
         data_Vencimento: new Date(formValue.date).toISOString(),
         pago: false,
         clienteId: formValue.clientID,

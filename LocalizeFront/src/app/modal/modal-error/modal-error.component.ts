@@ -18,7 +18,7 @@ export class ModalErrorComponent {
 
   onClose(): void {
     this.dialogRef.close();
-    console.log(this.data.message);
+
     // if (this.data.message === 'Erro ao logar') {
     //   this.router.navigate(['/']);
     // }

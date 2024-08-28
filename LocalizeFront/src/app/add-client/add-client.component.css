@@ -1,0 +1,71 @@
+.login-card {
+  max-width: 400px;
+  margin: 100px auto; 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  font-weight: bold; /* Texto em negrito */
+  font-size: 40px;
+}
+
+.login-card form div {
+  margin-bottom: 15px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  box-sizing: border-box;
+  background-color: rgb(229, 229, 229);
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000; 
+  color: #fff;
+  border: none;
+  border-radius: 5px; 
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.link-cadastrar {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.login-card .login-button:hover {
+  background-color: #333; 
+}
+
+.login-card .login-button:disabled {
+  background-color: #d3d3d3;
+  color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.login-card .link-cadastrar {
+  border: 0;
+  background-color: transparent;
+}
+
+.login-card .link-cadastrar:hover {
+  text-decoration: underline;
+}

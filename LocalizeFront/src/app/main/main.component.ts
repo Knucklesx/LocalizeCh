@@ -68,6 +68,10 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/add-charge']);
   }
 
+  addClient() {
+    this.router.navigate(['/new-client']);
+  }
+
   verifyCharges(clientId: number) {
     this.router.navigate(['/client-charges', clientId]);
   }
