@@ -20,7 +20,7 @@ namespace LocalizeApi.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Cobrança>(entity =>
             {
-                entity.Property(e => e.Valor).HasColumnType("decimal(18, 2)");
+                entity.Property(e => e.Value).HasColumnType("decimal(18, 2)");
             });
         }
 

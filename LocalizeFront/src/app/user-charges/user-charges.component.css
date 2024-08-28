@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc;
+  color: #8b4513;
+}
+
+.main-card {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 100px auto; 
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+  max-width: 90%;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+td, th {
+  border: none;
+  font-size: 13px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.cadastrar-button, .cancelar-button {
+  margin-left: 20px
+}
+
+.cadastrar-button {
+  background-color: #000000;
+  color: #fff;
+}
+
+.cadastrar-button:hover {
+  background-color: #4a4a4a;
+}
+
+.cancelar-button {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.cancelar-button:hover {
+  background-color: #ff6363;
+}
+
+
+.col-nome {
+  flex: 6;
+  display: flex;
+  align-items: center;
+}
+
+.col-valor, .col-vencimentos {
+  flex: 2;
+  text-align: center;
+}
+
+.col-valor {
+  width: 100px; /* Define uma largura fixa para a coluna de valor */
+}
+
+.col-button {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 10px; /* Espaço entre os botões */
+}
+
+thead tr, tbody tr {
+  display: flex;
+}
+
+th, td {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+}
+
+.btn-icon.edit {
+  background-color: blue;
+}
+
+.btn-icon.delete {
+  background-color: red;
+}
+
+.btn-text {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-text:hover {
+  background-color: #4a4a4a;
+}
+
+.expired {
+  background-color: rgb(255, 91, 91);
+  color: black;
+  border-radius: 10%;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 10px;
+  margin-left: 20px;
+}

@@ -1,0 +1,47 @@
+<div class="main-card">
+  <main class="main-content">
+    <div class="header">
+      <h2>Cobranças / {{clients.nome}}</h2>
+      <div>
+        <button class="cadastrar-button" (click)="addCharge()">Cadastrar</button>
+        <button class="cancelar-button" (click)="cancelPage()">Cancelar</button>
+      </div>
+    </div>
+    <div class="client-list">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-nome">Nome</th>
+            <th class="col-valor">Valor</th>
+            <th class="col-vencimentos">Vencimentos</th>
+            <th class="col-button"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let charge of clients.charges">
+            <td class="col-nome">
+              {{ charge.description }}
+              <span *ngIf="isExpired(charge.data_Vencimento, charge.pago)" class="expired">Expirado</span>
+            </td>
+            <td class="col-valor">{{ charge.value | currency:'BRL':'symbol':'1.2-2' }}</td>
+            <td class="col-vencimentos">{{ charge.data_Vencimento | date:'dd/MM/yyyy' }}</td>
+            <td class="col-button">
+              <button class="btn-icon edit" (click)="editClient(charge.id)">
+                <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                  <path
+                    d="M12.146 0.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2L2 11.207V14h2.793L14 4.793 11.207 2zM15 3.5L12.5 1 13 0.5 15.5 3 15 3.5z" />
+                </svg>
+              </button>
+              <button class="btn-icon delete" (click)="deleteClient(charge.id)">
+                <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                  <path
+                    d="M5.5 5.5a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6a.5.5 0 0 1 .5-.5zm3 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6a.5.5 0 0 1 .5-.5zm-6-3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v10.5a1.5 1.5 0 0 1-1.5 1.5h-8a1.5 1.5 0 0 1-1.5-1.5V4h-1a.5.5 0 0 1 0-1h1v-1zm1 1v10.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V4h-9zM4.5 1a.5.5 0 0 0-.5.5V2h8v-.5a.5.5 0 0 0-.5-.5h-7z" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

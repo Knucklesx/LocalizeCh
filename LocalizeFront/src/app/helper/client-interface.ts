@@ -5,17 +5,17 @@ export interface ClientInterface {
   endereço: string;
   documento: string;
   usuárioId: number;
-  cobranças: Cobrança[];
+  charges: Charges[];
   pagos: number;
   abertos: number;
   atrasados: number;
 }
 
-export interface Cobrança {
+export interface Charges {
   id: number;
-  descrição: string;
-  valor: number;
-  data: string;
+  description: string;
+  value: number;
+  data_Vencimento: string;
   pago: boolean;
   clienteId: number;
 }

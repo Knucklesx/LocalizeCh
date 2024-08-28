@@ -26,7 +26,7 @@ namespace LocalizeApi.Models
         public int UsuárioId { get; set; }
         // public virtual Usuário Usuário { get; set; } = null!;
 
-        public virtual ICollection<Cobrança> Cobranças { get; } = [];
+        public virtual ICollection<Cobrança> Charges { get; } = [];
 
 
     }

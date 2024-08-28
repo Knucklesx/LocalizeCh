@@ -14,9 +14,9 @@ namespace LocalizeApi.Models
         public int Id { get; set; }
 
         [Required]
-        public required string Descrição { get; set; }
+        public required string Description { get; set; }
         [Required]
-        public required decimal Valor { get; set; }
+        public required decimal Value { get; set; }
         [Required]
         public required DateTime Data_Vencimento { get; set; }
         [Required]

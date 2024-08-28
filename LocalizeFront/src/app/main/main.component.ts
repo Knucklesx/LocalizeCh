@@ -37,11 +37,11 @@ export class MainComponent implements OnInit {
             let pagos = 0;
             let abertos = 0;
             let atrasados = 0;
-            client.cobranças.forEach((cobrança) => {
+            client.charges.forEach((cobrança) => {
               if (cobrança.pago) {
                 pagos++;
               } else {
-                const dataVencimento = new Date(cobrança.data);
+                const dataVencimento = new Date(cobrança.data_Vencimento);
                 const hoje = new Date();
                 if (dataVencimento < hoje) {
                   atrasados++;
@@ -80,6 +80,6 @@ export class MainComponent implements OnInit {
     console.log(`oi ${clientId}`);
   }
   someAction(clientId: number) {
-    console.log(`oi ${clientId}`);
+    this.router.navigate(['/user-charges', clientId]);
   }
 }
