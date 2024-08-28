@@ -18,10 +18,11 @@ namespace LocalizeApi.Models
         [Required]
         public required decimal Valor { get; set; }
         [Required]
-        public required DateTime Data { get; set; }
+        public required DateTime Data_Vencimento { get; set; }
         [Required]
         public required bool Pago { get; set; }
+
         public int ClienteId { get; set; }
-        public virtual Cliente Cliente { get; set; } = null!;
+        // public virtual Cliente Cliente { get; set; } = null!;
     }
 }

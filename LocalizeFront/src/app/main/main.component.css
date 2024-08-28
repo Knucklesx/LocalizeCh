@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc;
+  color: #8b4513;
+}
+
+.main-card {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 100px auto; 
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+  max-width: 90%;
+}
+
+h2 {
+  font-size: 30px;
+  font: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin: auto; 
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+td, th {
+  border: none;
+  font-size: 13px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.cadastrar {
+  width: 100%;
+}
+
+button.buscar-cep {
+  width: auto;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.main-button {
+  background-color: #000000;
+  color: #fff;
+}
+
+.main-button:hover {
+  background-color: #a0522d;
+}
+
+.col-nome {
+  flex: 6;
+}
+
+.col-pagos, .col-abertos, .col-atrasados {
+  flex: 2;
+  justify-content: center; 
+}
+
+.col-button {
+  flex: 3;
+}
+
+thead tr, tbody tr {
+  display: flex;
+}
+
+th, td {
+  display: flex;
+  align-items: center;
+
+}
+
+
+.circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+.circle-green {
+  background-color: rgb(122, 255, 122);
+}
+
+.circle-blue {
+  background-color: rgb(143, 143, 255);
+}
+
+.circle-red {
+  background-color: rgb(255, 154, 154);
+}

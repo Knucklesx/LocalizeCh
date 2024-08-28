@@ -10,10 +10,11 @@
       <input type="password" id="senha" name="senha" formControlName="senha" required>
     </div>
     <div>
-      <button [disabled]="loginForm.invalid" class="login-button">Fazer Login</button>
+      <button [disabled]="loginForm.invalid" class="login-button">Entrar</button>
     </div>
-    <div>
-      <a routerLink="/cadastro" class="link-cadastrar">Clique aqui para criar uma conta</a>
-    </div>
+
   </form>
+  <div>
+    <button (click)="CadastrarUser()" class="link-cadastrar">Clique aqui para criar uma conta</button>
+  </div>
 </div>

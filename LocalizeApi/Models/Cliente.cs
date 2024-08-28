@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -21,11 +22,13 @@ namespace LocalizeApi.Models
         public required string Telefone { get; set; }
         [Required]
         public required string Endereço { get; set; }
-        public virtual ICollection<Cobrança> Cobranças { get; set; } = new List<Cobrança>();
-        public int UsuárioId { get; set; }
-        public virtual Usuário Usuário { get; set; } = null!;
 
-        public Cliente() { }
+        public int UsuárioId { get; set; }
+        // public virtual Usuário Usuário { get; set; } = null!;
+
+        public virtual ICollection<Cobrança> Cobranças { get; } = [];
+
+
     }
 
 }

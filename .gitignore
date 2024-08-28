@@ -7,3 +7,7 @@ LocalizeApi/Migrations/
 LocalizeFront/public/favicon.ico
 LocalizeFront/.vscode/
 LocalizeFront2
+.fake
+.vscode/settings.json
+LocalizeApi/.env
+

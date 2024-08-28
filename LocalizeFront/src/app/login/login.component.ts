@@ -32,21 +32,25 @@ export class LoginComponent {
   onSubmit() {
     const { email, senha } = this.loginForm.value;
     this.http
-      .post<UserInterface>('http://localhost:5069/api/Login/login', {
+      .post<UserInterface>('http://localhost:5048/api/Login/login', {
         email,
         senha,
       })
       .subscribe(
         (response) => {
-          this.router.navigate(['/main']);
+          if (response) {
+            console.log('response', response);
+
+            this.router.navigate(['/main']);
+          }
         },
         (error) => {
-          console.error('E-mail ou Senha incorreto');
+          console.error('E-mail ou Senha incorreto', error);
         }
       );
   }
 
-  createAcc() {
-    console.log('create account');
+  CadastrarUser() {
+    this.router.navigate(['/cadastro']);
   }
 }

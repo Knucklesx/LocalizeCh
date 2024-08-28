@@ -1,0 +1,30 @@
+<div class="main-card">
+  <main class="main-content">
+    <div class="header">
+      <h2>Clientes</h2>
+      <button class="main-button" (click)="addClient()">Adicionar Cliente</button>
+    </div>
+    <div class="client-list">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-nome">Nome</th>
+            <th class="col-pagos">Pagos</th>
+            <th class="col-abertos">Abertos</th>
+            <th class="col-atrasados">Atrasados</th>
+            <th class="col-button"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td class="col-nome">{{ client.nome }}</td>
+            <td class="col-pagos"><span class="circle circle-green">{{ client.pagos }}</span></td>
+            <td class="col-abertos"><span class="circle circle-blue">{{ client.abertos }}</span></td>
+            <td class="col-atrasados"><span class="circle circle-red">{{ client.atrasados }}</span></td>
+            <td class="col-button"><button class="main-button" (click)="verifyCharges(client.id)">Editar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

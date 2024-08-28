@@ -43,6 +43,11 @@ namespace LocalizeApi.Controller
         [HttpPost]
         public ActionResult Post([FromBody] Usuário user)
         {
+            var userExists = _localizeContext.Users.FirstOrDefault((u) => u.Email == user.Email);
+            if (userExists != null)
+            {
+                return Conflict(new { message = "Este e-mail já está cadastrado" });
+            }
             _localizeContext.Users.Add(user);
             _localizeContext.SaveChanges();
             return CreatedAtAction(nameof(Get), new { id = user.Id }, user);

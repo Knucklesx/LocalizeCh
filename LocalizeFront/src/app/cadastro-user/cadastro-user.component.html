@@ -1,0 +1,24 @@
+<div class="login-card">
+  <h2>Cadastrar</h2>
+  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" formControlName="nome" required>
+    </div>
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" formControlName="email" required>
+    </div>
+    <div>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" formControlName="senha" required>
+    </div>
+    <div>
+      <button [disabled]="formCadastro.invalid" class="login-button">Criar Conta</button>
+    </div>
+
+  </form>
+  <div>
+    <button (click)="BackToMain()" class="link-cadastrar">Cancelar</button>
+  </div>
+</div>

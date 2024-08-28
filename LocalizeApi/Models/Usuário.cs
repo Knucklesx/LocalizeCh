@@ -19,11 +19,7 @@ namespace LocalizeApi.Models
         public required string Email { get; set; }
         [Required]
         public required string Senha { get; set; }
-        public virtual ICollection<Cliente> Clientes { get; set; } = new List<Cliente>();
 
-
-        public Usuário()
-        {
-        }
+        public virtual ICollection<Cliente> Clientes { get; } = [];
     }
 }
