@@ -62,7 +62,6 @@ th {
 
 tbody tr:nth-child(odd) {
   background-color: #fff;
-
 }
 
 tbody tr:nth-child(even) {
@@ -102,7 +101,7 @@ button.buscar-cep {
 }
 
 .main-button:hover {
-  background-color: #a0522d;
+  background-color: #4a4a4a;
 }
 
 .col-nome {
@@ -116,6 +115,8 @@ button.buscar-cep {
 
 .col-button {
   flex: 3;
+  display: flex;
+  justify-content: space-around;
 }
 
 thead tr, tbody tr {
@@ -125,9 +126,7 @@ thead tr, tbody tr {
 th, td {
   display: flex;
   align-items: center;
-
 }
-
 
 .circle {
   display: inline-block;
@@ -136,18 +135,48 @@ th, td {
   line-height: 30px;
   border-radius: 50%;
   text-align: center;
-  color: #000000;
+  color: #fff;
   font-weight: bold;
 }
 
 .circle-green {
-  background-color: rgb(122, 255, 122);
+  background-color: green;
 }
 
 .circle-blue {
-  background-color: rgb(143, 143, 255);
+  background-color: blue;
 }
 
 .circle-red {
-  background-color: rgb(255, 154, 154);
+  background-color: red;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+}
+
+.btn-icon.edit {
+  background-color: blue;
+}
+
+.btn-icon.delete {
+  background-color: red;
+}
+
+.btn-text {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-text:hover {
+  background-color: #4a4a4a;
 }

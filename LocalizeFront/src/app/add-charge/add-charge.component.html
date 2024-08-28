@@ -1,0 +1,29 @@
+<div class="login-card">
+  <h2>Cadastrar</h2>
+  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="description">Descrição:</label>
+      <input type="text" id="description" name="description" formControlName="description" required>
+    </div>
+    <div>
+      <label for="price">Valor:</label>
+      <input type="text" id="price" name="price" formControlName="price" required (input)="formatCurrency($event)">
+    </div>
+    <div>
+      <label for="date">Data:</label>
+      <input type="date" id="date" name="date" formControlName="date" required>
+    </div>
+    <div>
+      <label for="clientID">Qual o Cliente:</label>
+      <select id="clientID" name="clientID" formControlName="clientID" required>
+        <option *ngFor="let client of clients" [value]="client.id">{{ client.nome }}</option>
+      </select>
+    </div>
+    <div>
+      <button [disabled]="formCadastro.invalid" class="login-button">Adicionar Cobrança</button>
+    </div>
+  </form>
+  <div>
+    <button (click)="BackToMain()" class="link-cadastrar">Cancelar</button>
+  </div>
+</div>

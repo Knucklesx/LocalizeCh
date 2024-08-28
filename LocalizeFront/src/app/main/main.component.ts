@@ -64,11 +64,22 @@ export class MainComponent implements OnInit {
         },
       });
   }
-  addClient() {
-    this.router.navigate(['/addclient']);
+
+  addCharge() {
+    this.router.navigate(['/add-charge']);
   }
 
   verifyCharges(clientId: number) {
     this.router.navigate(['/client-charges', clientId]);
+  }
+
+  editClient(clientId: number) {
+    console.log(`oi ${clientId}`);
+  }
+  deleteClient(clientId: number) {
+    console.log(`oi ${clientId}`);
+  }
+  someAction(clientId: number) {
+    console.log(`oi ${clientId}`);
   }
 }
